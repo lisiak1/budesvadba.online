@@ -416,11 +416,7 @@
         </div>
         <div class="row justify-content-center">
           <div class="col-md-6 text-center">
-            <h5 class="font-weight-normal text-muted mb-3 pb-3">
-              Clita ipsum aliquyam dolor diam dolores elitr nonumy. Rebum sea
-              vero ipsum eirmod tempor kasd. Diam amet lorem erat eos sit lorem
-              elitr justo
-            </h5>
+            <h5 class="font-weight-normal text-muted mb-3 pb-3"></h5>
           </div>
           <div class="container-fluid py-5" id="map"></div>
         </div>
@@ -524,29 +520,31 @@
               lng: 17.258721707184343
           };
 
-          // const palenica_bernolakovo = {
-          //     lat: 48.203196737096846,
-          //     lng: 17.29451493195678
-          // };
+          const palenica_bernolakovo = {
+              lat: 48.203196737096846,
+              lng: 17.29451493195678
+          };
 
           // Create the map, centered at gfg_office
           const map = new google.maps.Map(
                   document.getElementById("map"), {
 
               // Set the zoom of the map
-              zoom: 15,
+              zoom: 12,
               center: ivanka_church,
           });
 
           const marker_kostol = new google.maps.Marker({
           position: ivanka_church,
           map: map,
+          label: "Obrad"
           });
 
-          // const marker_palenica = new google.maps.Marker({
-          // position: palenica_bernolakovo,
-          // map: map,
-          // });
+          const marker_palenica = new google.maps.Marker({
+          position: palenica_bernolakovo,
+          map: map,
+          label: "Hostina"
+          });
       }
     </script>
   </body>
