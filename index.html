@@ -2,13 +2,15 @@
 <html lang="en">
   <head>
     <meta charset="utf-8" />
+   
     <title>Ninka & Maťko</title>
     <meta content="width=device-width, initial-scale=1.0" name="viewport" />
     <meta content="Free HTML Templates" name="keywords" />
     <meta content="Free HTML Templates" name="description" />
 
     <!-- Favicon -->
-    <link href="img/favicon.ico" rel="icon" />
+    <!-- <link href="img/favicon.ico" rel="icon" /> -->
+    <link rel="icon" type="image/x-icon" href="img/wedding-favicon.png">
 
     <!-- Google Web Fonts -->
     <link rel="preconnect" href="https://fonts.gstatic.com" />
@@ -69,6 +71,7 @@
           <a href="#hostina" class="nav-item nav-link">Hostina</a>
           <a href="#dary" class="nav-item nav-link">Dary</a>
           <a href="#info" class="nav-item nav-link">Info</a>
+          <a href="#mapa" class="nav-item nav-link">Mapa</a>
         </div>
       </div>
     </nav>
@@ -103,7 +106,7 @@
                   <h3
                     class="font-weight-normal text-white m-0"
                     style="letter-spacing: 2px">
-                    Ivanka pri Dunaji 30.9.2023 15:00
+                    30.9.2023 15:00 - Ivanka pri Dunaji 
                   </h3>
                 </div>
                 <div></div><br></div>
@@ -300,8 +303,8 @@
               <div
                 class="h-100 d-flex flex-column justify-content-center bg-secondary p-4 ml-md-3"
               >
-                <h4 class="mb-2">A ešte minimálne ďalších 1000 nás čaká</h4>
-                <p class="mb-2">Nekonečno - spolu navždy</p>
+                <h4 class="mb-2">A ešte minimálne ďalších nekonečno spoločných zážitkov nás čaká</h4>
+                <p class="mb-2">Spolu navždy</p>
                 <p class="m-0">
                   Lorem elitr magna stet rebum dolores sed. Est stet labore est
                   lorem lorem at amet sea, eos tempor rebum, labore amet ipsum
@@ -533,6 +536,36 @@
     </div>
     <!-- Event End -->
 
+
+    <div class="container-fluid py-5" id="mapa">
+      <div class="container py-5">
+        <div class="section-title position-relative text-center">
+          <h6
+            class="text-uppercase text-primary mb-3"
+            style="letter-spacing: 3px"
+          >
+            <!-- Event -->
+          </h6>
+          <h1 class="font-secondary display-4">Mapa</h1>
+          <i class="far fa-heart text-dark"></i>
+        </div>
+        <div class="row justify-content-center">
+          <div class="col-md-6 text-center">
+            <h5 class="font-weight-normal text-muted mb-3 pb-3">
+              Clita ipsum aliquyam dolor diam dolores elitr nonumy. Rebum sea
+              vero ipsum eirmod tempor kasd. Diam amet lorem erat eos sit lorem
+              elitr justo
+            </h5>
+          </div>
+          <div class="container-fluid py-5" id="map"></div>
+        </div>
+        </div>
+      </div>
+    </div>
+    <!-- Event End -->
+
+   
+
     <!-- Friends & Family Start -->
     <!-- <div class="container-fluid py-5" id="family">
       <div class="container pt-5 pb-3">
@@ -753,6 +786,8 @@
     </div> -->
     <!-- RSVP End -->
 
+
+
     <!-- Footer Start -->
     <div
       class="container-fluid bg-dark text-white py-5"
@@ -821,18 +856,60 @@
     <!-- Main -->
     <script src="js/main.js"></script>
 
+    <!-- for count down-->
     <script>
-      // default example
       simplyCountdown(".simply-countdown-one", {
-        year: 2023, // required
-        month: 9, // required
-        day: 30, // required
-        hours: 15, // Default is 0 [0-23] integer
-        minutes: 0, // Default is 0 [0-59] integer
-        seconds: 0, // Default is 0 [0-59] integer
+        year: 2023, 
+        month: 9,
+        day: 30, 
+        hours: 15, 
+        minutes: 0, 
+        seconds: 0,
         enableUtc: false
       });
+    </script>
 
+    <!-- for google map -->
+    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDMWkgV4VmVlOh3SFksNGDmSvJGp2jnBCs&callback=initMap&libraries=&v=weekly"
+      async>
+    </script>
+
+    <script>
+      
+      // Initialize and add the map
+      function initMap() {
+
+
+          // The location 
+          const ivanka_church = {
+              lat: 48.18972482094718,
+              lng: 17.258721707184343
+          };
+
+          // const palenica_bernolakovo = {
+          //     lat: 48.203196737096846,
+          //     lng: 17.29451493195678
+          // };
+
+          // Create the map, centered at gfg_office
+          const map = new google.maps.Map(
+                  document.getElementById("map"), {
+
+              // Set the zoom of the map
+              zoom: 15,
+              center: ivanka_church,
+          });
+
+          const marker_kostol = new google.maps.Marker({
+          position: ivanka_church,
+          map: map,
+          });
+
+          // const marker_palenica = new google.maps.Marker({
+          // position: palenica_bernolakovo,
+          // map: map,
+          // });
+      }
     </script>
   </body>
 </html>
