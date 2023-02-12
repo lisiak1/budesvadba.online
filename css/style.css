@@ -9457,6 +9457,15 @@ a.text-dark:hover, a.text-dark:focus {
   }
 }
 
+.img-txt-bottom-center {
+    position: absolute;
+    bottom: 20px;
+    left: 150px;
+    color: white;
+    font-family: 'Dancing Script'; 
+    font-size: 20px;
+}
+
 /********** Template CSS ************/
 .font-secondary {
   /* font-family: 'Great Vibes', cursive; */
